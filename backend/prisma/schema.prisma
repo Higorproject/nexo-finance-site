@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Indicator {
+  id        String   @id @default(cuid())
+  label     String
+  value     Float
+  delta     String
+  up        Boolean
+  createdAt DateTime @default(now())
+}
+
+model PortfolioPoint {
+  id    String @id @default(cuid())
+  month String
+  value Float
+  order Int
+}
+
+model Transaction {
+  id        String   @id @default(cuid())
+  title     String
+  party     String
+  amount    Float
+  inflow    Boolean
+  occurredAt DateTime @default(now())
+}
