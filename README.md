@@ -1,60 +1,42 @@
-# Fintech App — Monorepo
+# Nexo Finance - Landing Page Financeira
 
-Estrutura limpa, sem TanStack, sem Cloudflare, sem Wrangler, sem Lovable Cloud.
+Projeto demonstrativo de uma landing page para uma empresa fictícia do setor financeiro.
 
-```
-.
-├── frontend/   # Vite + React 18 + TypeScript + Tailwind v3 + shadcn/ui + Recharts + Framer Motion
-├── backend/    # Node.js + Express + TypeScript + Prisma + PostgreSQL
-└── README.md
-```
-
-## Pré-requisitos
-
-- Node.js 20+
-- pnpm, npm ou bun
-- PostgreSQL 14+ (local ou remoto)
-
-## Frontend
-
-```bash
-cd frontend
-npm install
-cp .env.example .env       # ajuste VITE_API_URL se necessário
-npm run dev                # http://localhost:5173
-npm run build              # build de produção em dist/
-npm run preview            # serve o build
-```
-
-## Backend
-
-```bash
-cd backend
-npm install
-cp .env.example .env       # configure DATABASE_URL e PORT
-npx prisma migrate dev     # cria as tabelas
-npx prisma generate
-npm run dev                # http://localhost:4000
-npm run build && npm start # produção
-```
-
-## Endpoints da API
-
-- `GET  /api/health` — healthcheck
-- `GET  /api/indicators` — indicadores do dashboard
-- `GET  /api/portfolio` — série histórica do portfólio
-- `GET  /api/transactions` — últimas transações
-- `POST /api/simulate` — simulador de investimento `{ amount, months, rate }`
-
-## Stack
-
-**Frontend:** Vite 5, React 18, TypeScript, Tailwind CSS 3, shadcn/ui, Recharts, Framer Motion, lucide-react, react-router-dom 6.
-
-**Backend:** Express 4, TypeScript, Prisma 5, PostgreSQL, Zod, CORS.
+O objetivo é mostrar como poderia ficar um site profissional para captação de leads, apresentação de serviços e construção de confiança com o cliente.
 
 ## Deploy
 
-- Frontend: Vercel, Netlify, Cloudflare Pages, ou qualquer host estático (`frontend/dist`).
-- Backend: Railway, Render, Fly.io, ou VPS com Node 20.
+https://nexo-finance-site.vercel.app/
 
-Sem amarras com plataforma. Código 100% portável.
+## Observação
+
+Este projeto é apenas uma demonstração visual.
+
+Alguns botões e áreas do site, como **Abrir conta**, **Entrar**, **Simular** e envio real de formulário, não possuem funcionamento ativo neste momento.
+
+Eles foram incluídos apenas para ilustrar como a experiência poderia funcionar em um projeto real para cliente.
+
+## Tecnologias
+
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
+- Node.js
+- Express
+- Prisma
+
+## Funcionalidades visuais
+
+- Layout responsivo
+- Seção de serviços financeiros
+- Simulador visual
+- Cards de indicadores
+- FAQ
+- Formulário ilustrativo
+- Botões de chamada para ação
+- Visual inspirado em fintechs
+
+## Objetivo
+
+Projeto criado para portfólio, demonstrando habilidades em desenvolvimento de landing pages modernas, responsivas e voltadas para conversão.
